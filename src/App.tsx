@@ -40,46 +40,6 @@ function App() {
   const handleChangeCurrentPage = (page: string) => {
     setCurrentPage(page)
   }
-  const sections = [
-    {
-      title: "Thông tin chính",
-      cols: 3,
-      fields: [
-        { label: "Mã nhà cung cấp", value: "KH000008" },
-        { label: "Tên nhà cung cấp", value: "Nguyễn Văn A" },
-        { label: "Số điện thoại", value: "0123456789" },
-        { label: "Email", value: "nguyenvana@gmail.com" },
-      ],
-    },
-    {
-      title: "Địa chỉ",
-      cols: 3,
-      fields: [
-        { label: "Tỉnh thành", value: "Hà Nội" },
-        { label: "Xã / phường", value: "Quận Hoàng Mai" },
-        { label: "Số nhà, tên đường", value: "123 Nguyễn Trãi" },
-      ],
-    },
-    {
-      title: "Thông tin công ty",
-      cols: 3,
-      fields: [
-        { label: "Tên công ty", value: "Công ty TNHH ABC" },
-        { label: "Chức vụ", value: "Kế toán" },
-        { label: "Mã số thuế", value: "0101234567" },
-      ],
-    },
-    {
-      title: "Hoạt động",
-      cols: 4,
-      fields: [
-        { label: "Người tạo", value: "Cao Hữu Quý" },
-        { label: "Ngày tạo", value: "21/08/2025" },
-        { label: "Người sửa", value: "Cao Hữu Quý" },
-        { label: "Ngày sửa", value: "21/08/2025" }
-      ],
-    }
-  ];
   return (
     <>
       <div className="flex h-screen bg-gray-200">

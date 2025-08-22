@@ -6,15 +6,14 @@ interface IOrderTable {
 }
 
 export default function OrderTable({ tableData, tableTitle }: IOrderTable) {
-  const [NCC, SetNCC] = useState(tableData);
 
   const [selected, setSelected] = useState<number[]>([]);
 
   const toggleSelectAll = () => {
-    if (selected.length === NCC.length) {
+    if (selected.length === tableData.length) {
       setSelected([]);
     } else {
-      setSelected(NCC.map((o: any) => o.id));
+      setSelected(tableData.map((o: any) => o.id));
     }
   };
 
@@ -33,7 +32,7 @@ export default function OrderTable({ tableData, tableTitle }: IOrderTable) {
                 >
                     <input
                     type="checkbox"
-                    checked={selected.length === NCC.length}
+                    checked={selected.length === tableData.length}
                     onChange={toggleSelectAll}
                     />
                 </th>
@@ -49,7 +48,7 @@ export default function OrderTable({ tableData, tableTitle }: IOrderTable) {
             </tr>
         </thead>
         <tbody>
-            {NCC.map((ncc: any) => (
+            {tableData.map((ncc: any) => (
             <tr
                 key={ncc.id}
                 className="hover:bg-gray-50 text-center h-[calc(100%/7)]"
