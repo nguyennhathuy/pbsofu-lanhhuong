@@ -1,11 +1,6 @@
 import { useState } from "react";
 
-interface IOrderTable {
-    tableData: any,
-    tableTitle: any
-}
-
-export default function OrderTable({ tableData, tableTitle }: IOrderTable) {
+export default function OrderTable({ tableData, tableTitle, setEditUser, setIsOpen }: any) {
 
   const [selected, setSelected] = useState<number[]>([]);
 
@@ -66,7 +61,16 @@ export default function OrderTable({ tableData, tableTitle }: IOrderTable) {
                   Object.values(ncc).map(
                     (m: any, i: any) => {
                       return (
-                        <td key={i} className="p-2 border border-gray-300 text-left">{m}</td>
+                        <td 
+                          key={i} 
+                          className="p-2 border border-gray-300 text-left cursor-pointer"
+                          onClick={() => {
+                            setEditUser(null);
+                            setIsOpen(true);
+                          }}
+                        >
+                          {m}
+                        </td>
                       );
                     }
                   )

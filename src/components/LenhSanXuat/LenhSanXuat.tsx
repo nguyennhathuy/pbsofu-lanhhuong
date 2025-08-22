@@ -13,6 +13,8 @@ export default function LenhSanXuat({ setEditUser, setIsOpen }: any) {return (
         <LenhSanXuatBody 
             sections={sections}
             title={title}
+            setEditUser={setEditUser}
+            setIsOpen={setIsOpen}
         />
         <NCCFooter />
     </div>

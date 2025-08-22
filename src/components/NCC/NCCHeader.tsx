@@ -1,11 +1,7 @@
 import { PlusIcon } from "@heroicons/react/24/solid";
 
-type NCCHeader = {
-  setEditUser: any;
-  setIsOpen: any;
-};
 
-export default function NCCHeader({ setEditUser, setIsOpen }: NCCHeader) {
+export default function NCCHeader({ setEditUser, setIsOpen }: any) {
     return (
         <div className="mt-[5px] w-full h-[42px] flex items-center justify-between">
             <button

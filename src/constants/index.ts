@@ -6,6 +6,8 @@ import { FaClipboardCheck } from "react-icons/fa";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { FaCameraRetro } from "react-icons/fa";
 import { FaHandshake } from "react-icons/fa";
+import { FaChartPie } from "react-icons/fa";
+
 
 
 
@@ -37,5 +39,13 @@ export const MODULE_LIST: ModuleSidebar[] = [
     {
         name: '5S',
         icon: FaCameraRetro
+    },
+    {
+        name: 'Dashboard nguồn lực',
+        icon: FaChartPie
+    },
+    {
+        name: 'Dashboard hiệu suất sản xuất',
+        icon: FaChartPie
     }
 ];

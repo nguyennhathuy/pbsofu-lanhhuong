@@ -11,6 +11,8 @@ import logoCongTy from "./assets/images/logo_cong_ty.jpg";
 import XuatKho from './components/XuatKho/XuatKho';
 import KiemKe from './components/KiemKe/KiemKe';
 import NhapKho from './components/NhapKho/NhapKho';
+import DashboardNguonLuc from './components/DashboardNguonLuc/DashboardNguonLuc';
+import DashboardHieuSuat from './components/DashboardHieuSuat/DashboardHieuSuat';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<string>(MODULE_LIST[0]['name']);
@@ -223,6 +225,12 @@ function App() {
                   return <KiemKe 
                             setEditUser={setEditUser}
                             setIsOpen={setIsOpen}
+                          />;
+                case "Dashboard nguồn lực":
+                  return <DashboardNguonLuc 
+                          />;
+                case "Dashboard hiệu suất sản xuất":
+                  return <DashboardHieuSuat
                           />;
                 default:
                   return <div>Đang build .....</div>;
