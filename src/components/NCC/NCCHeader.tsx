@@ -1,14 +1,16 @@
 import { PlusIcon } from "@heroicons/react/24/solid";
 
 
-export default function NCCHeader({ setEditUser, setIsOpen }: any) {
+export default function NCCHeader({ setEditUser, setIsOpen, type }: any) {
     return (
         <div className="mt-[5px] w-full h-[42px] flex items-center justify-between">
             <button
                 className="px-2 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 h-[32px] font-semibold text-[12px] flex items-center gap-1"
                 onClick={() => {
-                    setEditUser(null);
-                    setIsOpen(true);
+                    if(type === '5S') {
+                        setEditUser(null);
+                        setIsOpen(true);
+                    }
                 }}
             >
                 <PlusIcon className="w-4 h-4" />

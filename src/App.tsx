@@ -13,12 +13,14 @@ import KiemKe from './components/KiemKe/KiemKe';
 import NhapKho from './components/NhapKho/NhapKho';
 import DashboardNguonLuc from './components/DashboardNguonLuc/DashboardNguonLuc';
 import DashboardHieuSuat from './components/DashboardHieuSuat/DashboardHieuSuat';
+import Page5S from './components/5S/Page5S';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<string>(MODULE_LIST[0]['name']);
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState(false);
   const [editUser, setEditUser] = useState<User | null>(null);
+  const [type, setType] = useState<any>(null);
   const fields: FieldConfig[] = [
     { name: "name", label: "Tên người dùng", type: "text" },
     { name: "email", label: "Email", type: "text" },
@@ -71,6 +73,7 @@ function App() {
                         onClick={
                           () => {
                             handleChangeCurrentPage(m.name)
+                            setType(m.name)
                           }
                         }
                         className={`flex items-center rounded-lg p-2 text-sm transition-colors duration-300 ${currentPage === m.name ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100 hover:text-gray-800'}`}
@@ -232,6 +235,13 @@ function App() {
                 case "Báo cáo hiệu suất sản xuất":
                   return <DashboardHieuSuat
                           />;
+                case "5S":
+                  return <Page5S 
+                            setEditUser={setEditUser}
+                            setIsOpen={setIsOpen}
+                            type={type}
+                            setType={setType}
+                          />;
                 default:
                   return <div>Đang build .....</div>;
               }
@@ -246,6 +256,8 @@ function App() {
         fields={fields}
         initialData={editUser ?? {}}
         onSubmit={handleSubmit}
+        type={type}
+        setType={setType}
       />
     </>
   )

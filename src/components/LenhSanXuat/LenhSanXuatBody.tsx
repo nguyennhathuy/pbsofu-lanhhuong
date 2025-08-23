@@ -12,10 +12,6 @@ export default function LenhSanXuatBody({ setEditUser, setIsOpen }: any) {
                 setEditUser={setEditUser}
                 setIsOpen={setIsOpen}
             />
-            {/* <LenhSanXuatBodyInfo
-                title={title}
-                sections={sections}
-            /> */}
         </div>
     );
 }

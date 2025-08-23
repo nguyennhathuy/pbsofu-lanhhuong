@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export default function OrderTable({ tableData, tableTitle, setEditUser, setIsOpen }: any) {
-
   const [selected, setSelected] = useState<number[]>([]);
 
   const toggleSelectAll = () => {
