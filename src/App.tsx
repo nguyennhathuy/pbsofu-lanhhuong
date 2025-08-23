@@ -226,10 +226,10 @@ function App() {
                             setEditUser={setEditUser}
                             setIsOpen={setIsOpen}
                           />;
-                case "Dashboard nguồn lực":
+                case "Báo cáo nguồn lực":
                   return <DashboardNguonLuc 
                           />;
-                case "Dashboard hiệu suất sản xuất":
+                case "Báo cáo hiệu suất sản xuất":
                   return <DashboardHieuSuat
                           />;
                 default:

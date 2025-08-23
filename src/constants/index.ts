@@ -37,15 +37,16 @@ export const MODULE_LIST: ModuleSidebar[] = [
         icon: FaHandshake
     },
     {
+        name: 'Báo cáo hiệu suất sản xuất',
+        icon: FaChartPie
+    },
+    {
+        name: 'Báo cáo nguồn lực',
+        icon: FaChartPie
+    },
+    
+    {
         name: '5S',
         icon: FaCameraRetro
-    },
-    {
-        name: 'Dashboard nguồn lực',
-        icon: FaChartPie
-    },
-    {
-        name: 'Dashboard hiệu suất sản xuất',
-        icon: FaChartPie
     }
 ];

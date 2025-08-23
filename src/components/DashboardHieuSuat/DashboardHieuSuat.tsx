@@ -127,7 +127,7 @@ export default function DashboardHieuSuat() {
     <div className="py-[10px] px-[10px] mx-auto">
       {/* Header */}
       <header className="mb-6">
-        <h1 className="text-3xl font-bold text-gray-800">Dashboard Hiệu suất Sản xuất</h1>
+        <h1 className="text-3xl font-bold text-gray-800">Báo cáo hiệu suất sản xuất</h1>
       </header>
 
       {/* Filters */}

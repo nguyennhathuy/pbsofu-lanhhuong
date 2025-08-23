@@ -80,7 +80,33 @@ export default function DashboardNguonLuc() {
             { name: "Phân loại", speed: 470, time: "6.8/7.5 giờ", resource: "9 NC" },
             { name: "Đóng cont", speed: 0, time: "0.5/0.5 giờ", resource: "5 NC" },
             ],
-        }
+        },
+        {
+          id: "LSX-25-08-116",
+          stages: [
+            { name: "Sàn hấp", speed: 4300, time: "4/4 giờ", resource: "Lò Hấp #1" },
+            { name: "Chẻ", speed: 260, time: "20/19 giờ", resource: "15 NC" },
+            { name: "Bắn màu NS", speed: 1250, time: "4.2/4 giờ", resource: "Máy BM-03" },
+            { name: "Sấy", speed: 355, time: "13/13 giờ", resource: "Lò Sấy #1" },
+            { name: "Cạo lụa", speed: 240, time: "21/20 giờ", resource: "21 NC" },
+            { name: "Bắn màu TP", speed: 1080, time: "4/4.5 giờ", resource: "Máy BM-05" },
+            { name: "Phân loại", speed: 455, time: "7/7.5 giờ", resource: "8 NC" },
+            { name: "Đóng cont", speed: 0, time: "0.5/0.5 giờ", resource: "4 NC" },
+          ],
+        },
+        {
+          id: "LSX-25-08-117",
+          stages: [
+            { name: "Sàn hấp", speed: 4420, time: "3.9/4 giờ", resource: "Lò Hấp #2" },
+            { name: "Chẻ", speed: 290, time: "18.5/19 giờ", resource: "14 NC" },
+            { name: "Bắn màu NS", speed: 1330, time: "3.7/4 giờ", resource: "Máy BM-04" },
+            { name: "Sấy", speed: 390, time: "12/13 giờ", resource: "Lò Sấy #2" },
+            { name: "Cạo lụa", speed: 260, time: "19/20 giờ", resource: "23 NC" },
+            { name: "Bắn màu TP", speed: 1150, time: "4/4.5 giờ", resource: "Máy BM-02" },
+            { name: "Phân loại", speed: 480, time: "6.8/7.5 giờ", resource: "9 NC" },
+            { name: "Đóng cont", speed: 0, time: "0.5/0.5 giờ", resource: "5 NC" },
+          ],
+        },
     ];
 
 
@@ -131,19 +157,19 @@ export default function DashboardNguonLuc() {
         {/* Header */}
         <header className="mb-6">
           <h1 className="text-3xl font-bold text-gray-800">
-            Dashboard So sánh Tốc độ, Thời gian & Nguồn lực
+            Báo cáo so sánh tốc độ, thời gian & nguồn lực
           </h1>
         </header>
 
         {/* Table */}
         <div className="bg-white overflow-hidden">
           <div className="overflow-x-auto overflow-hidden">
-            <table className="w-full text-sm text-left text-gray-500 border-collapse border border-gray-300">
+            <table className="text-sm text-left text-gray-500 border-collapse border border-gray-300">
               <thead className="text-xs text-gray-700 uppercase sticky top-0 z-10 bg-gray-50">
                 <tr>
                   <th
                     scope="col"
-                    className="px-4 py-3 sticky left-0 bg-white z-20 border-b border-r"
+                    className="px-4 py-3 sticky left-0 bg-white z-20 border-b border-r min-w-[150px] w-40"
                     rowSpan={2}
                   >
                     Mã LSX
@@ -201,7 +227,7 @@ export default function DashboardNguonLuc() {
                 ) : (
                   processedData.map((order) => (
                     <tr key={order.id} className="bg-white hover:bg-gray-100">
-                      <td className="px-4 py-3 font-medium text-gray-900 sticky left-0 bg-white border-b border-r">
+                      <td className="px-4 py-3 font-medium text-gray-900 sticky left-0 bg-white border-b border-r min-w-[150px] w-40">
                         {order.id}
                       </td>
                       {stageNames.map((stageName, index) => {
