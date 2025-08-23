@@ -235,7 +235,7 @@ function App() {
                 case "Báo cáo hiệu suất sản xuất":
                   return <DashboardHieuSuat
                           />;
-                case "5S":
+                case "Chụp ảnh sau sản xuất":
                   return <Page5S 
                             setEditUser={setEditUser}
                             setIsOpen={setIsOpen}

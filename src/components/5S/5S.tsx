@@ -102,7 +102,7 @@ export default function BaoCao5S({ onClose }: any) {
         {/* Header */}
         <header className="text-center border-b pb-6 mb-6">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
-            Báo cáo 5S & Hình ảnh Hiện trường
+            Hình ảnh Hiện trường
           </h1>
         </header>
 

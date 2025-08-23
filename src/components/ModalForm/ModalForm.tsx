@@ -16,7 +16,7 @@ export function ModalForm<T extends Record<string, any>>({
     console.log(formData)
     setFormData(initialData);
   }, [initialData]);
-  if(type === 'Lệnh sản xuất' || type === '5S') {
+  if(type === 'Lệnh sản xuất' || type === 'Chụp ảnh sau sản xuất') {
     return (
       <AnimatePresence>
         {isOpen && (
@@ -40,7 +40,7 @@ export function ModalForm<T extends Record<string, any>>({
                               onClose={onClose}
                               setType={setType}
                             />
-                  case "5S":
+                  case "Chụp ảnh sau sản xuất":
                     return <BaoCao5S
                               onClose={onClose}
                               setType={setType}
